@@ -1,14 +1,13 @@
 {
-    "orgName": "ursus-park",
-    "edition": "Developer",
-    "language": "en_US",
-    "hasSampleData": false,
-    "settings": {
-        "lightningExperienceSettings": {
-            "enableS1DesktopEnabled": true
-        },
-        "mobileSettings": {
-            "enableS1EncryptedStoragePref2": false
-        }
+  "orgName": "krishna company",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
     }
+  }
 }

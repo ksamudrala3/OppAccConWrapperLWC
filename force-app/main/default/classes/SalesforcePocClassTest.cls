@@ -1,9 +1,3 @@
-/*
-* @Name         SalesforcePocClassTest 
-* @Author       Krishna Teja Samudrala <krishntej1@gmail.com>
-* @Date         21/05/2022
-* @Description  This class is used to test SalesforcePocClass
-*/
 @isTest
 public class SalesforcePocClassTest {
     
@@ -14,8 +8,8 @@ public class SalesforcePocClassTest {
         Opportunity o = new Opportunity(
             AccountId=a.Id, Description='Test',Name='Test',CloseDate=System.today(), StageName='Closed Won');
         Contact c = new Contact(LastName='Test', Email='test@test.com',Phone='1234567890',AccountId=a.Id);
-        Insert o;
-        Insert c;
+        insert o;
+        insert c;
     }
     static testMethod void testgetOppRecords(){
         String uniqueUserName = 'standarduser' + DateTime.now().getTime() + '@testorg.com';
@@ -31,7 +25,7 @@ public class SalesforcePocClassTest {
         Account a = [Select id, Name from Account LIMIT 1];
         System.runAs(u){
             Test.startTest();
-            List<SalesforcePocClass.wrapperObject> wrapList = SalesforcePocClass.getOppRecords(o.stageName, a.Name,c.Name, 5, 0);
+            List<SalesforcePocClass.wrapperObject> wrapList = SalesforcePocClass.getOppRecords(o.stageName, a.Name,c.Name);
             Test.stopTest();
             System.assertEquals(1, wrapList.size());
         }       
