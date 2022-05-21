@@ -23,7 +23,7 @@
         <div class="slds-card__body slds-card__body_inner">
             <div class="slds-box">
                 <lightning-layout>
-                    <lightning-layout-item padding="around-small" size="4">
+                    <lightning-layout-item padding="around-small" size="3">
 
                         <template if:true={oppStages}>
                             <lightning-combobox name="oppStage" label="Opportunity Stage" value={stageNameValue}
@@ -32,7 +32,7 @@
                         </template>
 
                     </lightning-layout-item>
-                    <lightning-layout-item padding="around-small" size="4">
+                    <lightning-layout-item padding="around-small" size="3">
 
                         <lightning-input type="search" label="Account search" onchange={handleFilterChange}
                             name="account" value={accName}>
@@ -40,12 +40,16 @@
 
                     </lightning-layout-item>
 
-                    <lightning-layout-item padding="around-small" size="4">
+                    <lightning-layout-item padding="around-small" size="3">
 
                         <lightning-input type="search" label="Contact Search" onchange={handleFilterChange}
                             name="contact" value={conName}>
                         </lightning-input>
 
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="3">
+                        <lightning-combobox name="numRecs" label="Number of records" value={numOfRec}
+                            options={numRecoptions} onchange={handleFilterChange}></lightning-combobox>
                     </lightning-layout-item>
                 </lightning-layout>
             </div>

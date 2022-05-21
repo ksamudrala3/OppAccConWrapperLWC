@@ -14,7 +14,7 @@ public without sharing class SalesforcePocClass {
     */
     
     @AuraEnabled
-    public static List<wrapperObject> getOppRecords(String StageName, String AccountName, String ContactName ) {
+    public static List<wrapperObject> getOppRecords(String StageName, String AccountName, String ContactName, Integer limitNum ) {
         String searchAccString = string.isNotBlank(AccountName) ? '%' + string.escapeSingleQuotes(AccountName) + '%' : '';
         String searchConString = string.isNotBlank(ContactName) ? '%' + string.escapeSingleQuotes(ContactName) + '%' : '';
         String searchStageName = string.isBlank(StageName) ? '%%' : '%' + string.escapeSingleQuotes(StageName) + '%';
@@ -50,7 +50,7 @@ public without sharing class SalesforcePocClass {
                                  FROM Opportunity
                                  WHERE StageName LIKE :searchStageName
                                  AND (Account.Name LIKE :searchAccString
-                                      OR AccountId IN :accIdsForFilterSet)])
+                                      OR AccountId IN :accIdsForFilterSet) LIMIT :limitNum])
             {
                 wrapIdSet.add(o.Id);
                 wrapIdSet.add(o.AccountId);

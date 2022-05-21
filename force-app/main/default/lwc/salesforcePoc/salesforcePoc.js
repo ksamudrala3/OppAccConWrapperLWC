@@ -95,6 +95,10 @@ export default class SalesforcePoc extends LightningElement {
     conValue;
     stageNameValue;
     showFooter;
+    numRecoptions = [{ label: 5, value: 5 },
+    { label: 10, value: 10 },
+        { label: 50, value: 50 }];
+    numOfRec = 5;
     @track oppStages = [];
     @track error;
     @track opportunities = [];
@@ -114,9 +118,12 @@ export default class SalesforcePoc extends LightningElement {
         if (event.target.name === "contact") {
             this.conValue = value;
         }
+        if (event.target.name === "numRecs") {
+            this.numOfRec = value;
+        }
         
         getOppRecords({
-            StageName: this.stagevalue, AccountName: this.accValue, ContactName: this.conValue})
+            StageName: this.stagevalue, AccountName: this.accValue, ContactName: this.conValue, limitNum:this.numOfRec})
             .then((result) => {                
                 this.opportunities = result;
                 this.showFooter = this.opportunities.length > 0 ? true : false;
