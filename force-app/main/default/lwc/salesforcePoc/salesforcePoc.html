@@ -53,12 +53,7 @@
         <footer class="slds-card__footer">
             <div class="slds-m-around_small">
                 <template if:true={showFooter}>
-                    <template if:true={opportunities}>
-                        <lightning-datatable data={opportunities} columns={columns} key-field="Id" sorted-by={sortBy}
-                            sorted-direction={sortDirection} onsort={doSorting} hide-checkbox-column="true"
-                            show-row-number-column="true">
-                        </lightning-datatable>
-                    </template>
+                    <c-data-table-cmp columns={columns} opportunities={opportunities}></c-data-table-cmp>
                     <template if:true={error}>
                         {error}
                     </template>

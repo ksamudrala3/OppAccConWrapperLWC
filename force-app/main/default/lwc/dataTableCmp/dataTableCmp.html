@@ -1,0 +1,9 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:true={opportunities}>
+        <lightning-datatable data={opportunities} columns={columns} key-field="Id" sorted-by={sortBy}
+            sorted-direction={sortDirection} onsort={doSorting} hide-checkbox-column="true"
+            show-row-number-column="true">
+        </lightning-datatable>
+    </template>
+</template>
