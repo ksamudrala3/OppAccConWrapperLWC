@@ -1,0 +1,112 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <!-- <lightning-card title="Account, Contact & Opportunity Search Component" icon-name="standard:account"
+        class="slds-grid slds-einstein-header slds-card__header">
+        <div class="slds-box">
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="4">
+
+                    <template if:true={oppStages}>
+                        <lightning-combobox name="oppStage" label="Opportunity Stage" value={stageNameValue}
+                            placeholder="Select Stage" options={oppStages} onchange={handleFilterChange}>
+                        </lightning-combobox>
+                    </template>
+
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="4">
+
+                    <lightning-input type="search" label="Account search" onchange={handleFilterChange} name="account">
+                    </lightning-input>
+
+                </lightning-layout-item>
+
+                <lightning-layout-item padding="around-small" size="4">
+
+                    <lightning-input type="search" label="Contact Search" onchange={handleFilterChange} name="contact">
+                    </lightning-input>
+
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <br />
+        <div class="slds-m-around_small">
+            <template if:true={showFooter}>
+                <template if:true={opportunities}>
+                    <lightning-datatable data={opportunities} columns={columns} key-field="Id" sorted-by={sortBy}
+                        sorted-direction={sortDirection} onsort={doSorting} hide-checkbox-column="true">
+                    </lightning-datatable>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>
+            </template>
+        </div>
+    </lightning-card> -->
+
+    <article class="slds-card">
+        <div class="slds-grid slds-einstein-header slds-card__header">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                    <div class="slds-media__body">
+                        <h2 class="slds-truncate" title="Einstein (10+)">
+                            <a href="#" class="slds-card__header-link" title="Einstein (10+)">
+                                <span class="slds-text-heading_small">Account, Contact and Opportunity Search
+                                    Component</span>
+                            </a>
+                            <lightning-helptext
+                                content="Search using Opportunity Stage and either Account or Contact Name">
+                            </lightning-helptext>
+                        </h2>
+                    </div>
+                </div>
+                <div class="slds-einstein-header__figure slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="4">
+
+                        <template if:true={oppStages}>
+                            <lightning-combobox name="oppStage" label="Opportunity Stage" value={stageNameValue}
+                                placeholder="Select Stage" options={oppStages} onchange={handleFilterChange}>
+                            </lightning-combobox>
+                        </template>
+
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+
+                        <lightning-input type="search" label="Account search" onchange={handleFilterChange}
+                            name="account" value={accName}>
+                        </lightning-input>
+
+                    </lightning-layout-item>
+
+                    <lightning-layout-item padding="around-small" size="4">
+
+                        <lightning-input type="search" label="Contact Search" onchange={handleFilterChange}
+                            name="contact" value={conName}>
+                        </lightning-input>
+
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+        <footer class="slds-card__footer">
+            <div class="slds-m-around_small">
+                <template if:true={showFooter}>
+                    <template if:true={opportunities}>
+                        <lightning-datatable data={opportunities} columns={columns} key-field="Id" sorted-by={sortBy}
+                            sorted-direction={sortDirection} onsort={doSorting} hide-checkbox-column="true"
+                            show-row-number-column="true">
+                        </lightning-datatable>
+                    </template>
+                    <template if:true={error}>
+                        {error}
+                    </template>
+                </template>
+            </div>
+        </footer>
+    </article>
+</template>
