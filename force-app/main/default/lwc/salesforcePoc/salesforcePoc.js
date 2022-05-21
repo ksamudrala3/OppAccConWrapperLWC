@@ -119,9 +119,7 @@ export default class SalesforcePoc extends LightningElement {
             StageName: this.stagevalue, AccountName: this.accValue, ContactName: this.conValue})
             .then((result) => {                
                 this.opportunities = result;
-                if(this.opportunities.length > 0) {
-                    this.showFooter = true;
-                }
+                this.showFooter = this.opportunities.length > 0 ? true : false;
                 this.error = undefined;
             })
             .catch((error) => {
