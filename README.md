@@ -2,7 +2,7 @@
 
 Deploy this project to your Salesforce Org using the following button.
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![alt text](https://github.com/ksamudrala3/OppAccConWrapperLWC/blob/SalesforcePoc/Screencast 2022-05-21 19:24:37.mp4?raw=true)
 
 <a href="https://githubsfdeploy.herokuapp.com?owner=ksamudrala3&repo=OppAccConWrapperLWC&ref=SalesforcePoc">
   <img alt="Deploy to Salesforce"
