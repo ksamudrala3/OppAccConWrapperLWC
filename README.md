@@ -1,5 +1,5 @@
 # Salesforce DX Project: Next Steps
-<a href="https://githubsfdeploy.herokuapp.com?owner=Krishna Teja Samudrala&repo=https://github.com/ksamudrala3/OppAccConWrapperLWC/tree/SalesforcePoc">
+<a href="https://githubsfdeploy.herokuapp.com/app/githubdeploy/financialforcedev/apex-mdapi">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
