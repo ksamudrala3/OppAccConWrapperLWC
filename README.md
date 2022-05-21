@@ -1,5 +1,5 @@
 # Salesforce DX Project: Next Steps
-<a href="https://githubsfdeploy.herokuapp.com/app/githubdeploy/ksamudrala3/OppAccConWrapperLWC/SalesforcePoc">
+<a href="https://githubsfdeploy.herokuapp.com/app/githubdeploy/ksamudrala3/OppAccConWrapperLWC">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
