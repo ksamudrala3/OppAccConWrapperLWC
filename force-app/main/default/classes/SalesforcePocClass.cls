@@ -1,4 +1,17 @@
+/*
+* @Name         SalesforcePocClass 
+* @Author       Krishna Teja Samudrala <krishntej1@gmail.com>
+* @Date         21/05/2022
+* @Description  This class is used in SalesforcePoc LWC to retrieve Account, Contact and Opportunity data 
+* @TestCLass    SalesforcePocClassTest
+*/
+
 public without sharing class SalesforcePocClass {    
+    /*
+    * @Description  This method gets the records of Account, Contact and Opportunity Objects based on user inputs
+	* @Params		String StageName, String AccountName, String ContactName - Input from User
+	* @Return       List<wrapperObject> - Custom wrapper object's List
+    */
     
     @AuraEnabled
     public static List<wrapperObject> getOppRecords(String StageName, String AccountName, String ContactName ) {
@@ -67,6 +80,11 @@ public without sharing class SalesforcePocClass {
         return wrapList;
     }
     
+    /*
+    * @Description  This method masks the records of Account, Contact and Opportunity Objects based on user's access level
+	* @Params		List<wrapperObject> wrapList - Input from getOppRecords method, Set<Id> wrapIds - Ids of all objects retieved
+	* @Return       List<wrapperObject> - Custom wrapper object's List
+    */
     public static List<wrapperObject> processAccessCheck(List<wrapperObject> wrapList, Set<Id> wrapIdSet){
         
         List<wrapperObject> returnList = new List<wrapperObject>();
@@ -93,6 +111,11 @@ public without sharing class SalesforcePocClass {
         return returnList;
     }
     
+    /*
+    * @Description  This is a wrapper class which combines data of Account, Contact and Opportunity Objects
+	* @Params		None for one constructor, String accId for another constructor
+	* @Return       NA
+    */
     public class wrapperObject {
         @AuraEnabled
         public String oppName{get;set;}
