@@ -1,6 +1,7 @@
 import { LightningElement, api, track, wire } from 'lwc';
+import { NavigationMixin } from 'lightning/navigation';
 
-export default class DataTableCmp extends LightningElement {
+export default class DataTableCmp extends NavigationMixin( LightningElement ) {
     @api columns;
     @api opportunities;
 
@@ -28,5 +29,34 @@ export default class DataTableCmp extends LightningElement {
             return isReverse * ((x > y) - (y > x));
         });
         this.opportunities = parseData;
-    }  
+    }
+    
+    handleRowAction( event ) {
+
+        const actionName = event.detail.action.name;
+        const row = event.detail.row;
+        switch ( actionName ) {
+            case 'view':
+                this[NavigationMixin.Navigate]({
+                    type: 'standard__recordPage',
+                    attributes: {
+                        recordId: row.oppId,
+                        actionName: 'view'
+                    }
+                });
+                break;
+            case 'edit':
+                this[NavigationMixin.Navigate]({
+                    type: 'standard__recordPage',
+                    attributes: {
+                        recordId: row.oppId,
+                        objectApiName: 'Opportunity',
+                        actionName: 'edit'
+                    }
+                });
+                break;
+            default:
+        }
+
+    }
 }

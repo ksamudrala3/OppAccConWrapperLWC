@@ -6,8 +6,18 @@ import { getPicklistValues } from 'lightning/uiObjectInfoApi';
 import Opportunity_OBJECT from '@salesforce/schema/Opportunity';
 import StageName_FIELD from '@salesforce/schema/Opportunity.StageName';
 
+const actions = [
+    { label: 'View', name: 'view' },
+    { label: 'Edit', name: 'edit' }
+];
+ 
 const columns =[{
-        label: 'Opportunity name',
+    label: 'Opportunity name',
+    // fieldName: 'oppId', type: 'button', sortable: true,
+        // typeAttributes: {
+        //     label: { fieldName: 'oppName' },
+        //     variant: 'base'
+        // }
         fieldName: 'oppName',
         type: 'text',
         sortable: true
@@ -47,6 +57,10 @@ const columns =[{
         fieldName: 'conPhone',
         type: 'text',
         sortable: true
+    },
+    {
+        type: 'action',
+        typeAttributes: { rowActions: actions },
     }
     ];
 
