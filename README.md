@@ -10,3 +10,4 @@ Fell free to deploy this project to your Salesforce Org using the following butt
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
+Alternatively you may also use this link to install in your org: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2x000004Nw42AAC
