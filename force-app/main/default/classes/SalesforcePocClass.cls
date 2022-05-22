@@ -14,7 +14,7 @@ public without sharing class SalesforcePocClass {
     */
     
     @AuraEnabled
-    public static List<wrapperObject> getOppRecords(String StageName, String AccountName, String ContactName, Integer limitNum ) {
+    public static List<wrapperObject> getOppRecords(String StageName, String AccountName, String ContactName, Integer limitNum) {
         String searchAccString = string.isNotBlank(AccountName) ? '%' + string.escapeSingleQuotes(AccountName) + '%' : '';
         String searchConString = string.isNotBlank(ContactName) ? '%' + string.escapeSingleQuotes(ContactName) + '%' : '';
         String searchStageName = string.isBlank(StageName) ? '%%' : '%' + string.escapeSingleQuotes(StageName) + '%';

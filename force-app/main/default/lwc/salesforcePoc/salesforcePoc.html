@@ -10,7 +10,7 @@
                             <a href="#" class="slds-card__header-link" title="Einstein (10+)">
                                 <span class="slds-text-heading_small">Account, Contact and Opportunity Search
                                     Component</span>
-                            </a>
+                            </a>&nbsp;
                             <lightning-helptext
                                 content="Search using Opportunity Stage and either Account or Contact Name">
                             </lightning-helptext>
@@ -23,16 +23,16 @@
         <div class="slds-card__body slds-card__body_inner">
             <div class="slds-box">
                 <lightning-layout>
-                    <lightning-layout-item padding="around-small" size="3">
+                    <lightning-layout-item padding="around-small" size="4">
 
                         <template if:true={oppStages}>
                             <lightning-combobox name="oppStage" label="Opportunity Stage" value={stageNameValue}
-                                placeholder="Select Stage" options={oppStages} onchange={handleFilterChange}>
+                                options={oppStages} onchange={handleFilterChange}>
                             </lightning-combobox>
                         </template>
 
                     </lightning-layout-item>
-                    <lightning-layout-item padding="around-small" size="3">
+                    <lightning-layout-item padding="around-small" size="4">
 
                         <lightning-input type="search" label="Account search" onchange={handleFilterChange}
                             name="account" value={accName}>
@@ -40,16 +40,12 @@
 
                     </lightning-layout-item>
 
-                    <lightning-layout-item padding="around-small" size="3">
+                    <lightning-layout-item padding="around-small" size="4">
 
                         <lightning-input type="search" label="Contact Search" onchange={handleFilterChange}
                             name="contact" value={conName}>
                         </lightning-input>
 
-                    </lightning-layout-item>
-                    <lightning-layout-item padding="around-small" size="3">
-                        <lightning-combobox name="numRecs" label="Number of records" value={numOfRec}
-                            options={numRecoptions} onchange={handleFilterChange}></lightning-combobox>
                     </lightning-layout-item>
                 </lightning-layout>
             </div>
@@ -57,7 +53,13 @@
         <footer class="slds-card__footer">
             <div class="slds-m-around_small">
                 <template if:true={showFooter}>
-                    <c-data-table-cmp columns={columns} opportunities={opportunities}></c-data-table-cmp>
+                    <c-data-table-cmp columns={columns} opportunities={data}></c-data-table-cmp>
+                    <div class="slds-m-around_medium">
+                        <p class="slds-m-vertical_medium content">
+                            Displaying {startingRecord} to {endingRecord} of {totalRecountCount} records.
+                            Page {page} of {totalPage}. </p>
+                        <c-paginator onprevious={previousHandler} onnext={nextHandler}></c-paginator>
+                    </div>
                     <template if:true={error}>
                         {error}
                     </template>
