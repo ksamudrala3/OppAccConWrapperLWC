@@ -137,11 +137,5 @@ public without sharing class SalesforcePocClass {
         public String conId{get;set;}
         @AuraEnabled
         public String oppId{get;set;}
-        public wrapperObject() {
-            
-        }
-        public wrapperObject(String accId) {
-            this.accId = accId;
-        }
     }
 }

@@ -1,3 +1,9 @@
+/*
+* @Name         SalesforcePocClassTest 
+* @Author       Krishna Teja Samudrala <krishntej1@gmail.com>
+* @Date         21/05/2022
+* @Description  This class is used to test SalesforcePocClass
+*/
 @isTest
 public class SalesforcePocClassTest {
     
@@ -25,7 +31,7 @@ public class SalesforcePocClassTest {
         Account a = [Select id, Name from Account LIMIT 1];
         System.runAs(u){
             Test.startTest();
-            List<SalesforcePocClass.wrapperObject> wrapList = SalesforcePocClass.getOppRecords(o.stageName, a.Name,c.Name);
+            List<SalesforcePocClass.wrapperObject> wrapList = SalesforcePocClass.getOppRecords(o.stageName, a.Name,c.Name, 1);
             Test.stopTest();
             System.assertEquals(1, wrapList.size());
         }       
