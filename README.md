@@ -1,7 +1,8 @@
 # A repository containing various POCs in Salesforce
-![Problem statement](https://user-images.githubusercontent.com/35221111/171987053-102af18a-8c1e-43d6-ba83-b171467dadf7.jpeg)
 
-POC 1: 
+POC 1, Problem statement:
+
+![Problem statement](https://user-images.githubusercontent.com/35221111/171987053-102af18a-8c1e-43d6-ba83-b171467dadf7.jpeg)
 
 A LWC to fetch Opportunities along with it's Account Name and it's associated most recent Contact details
 
