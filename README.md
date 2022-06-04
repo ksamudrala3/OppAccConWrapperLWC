@@ -45,10 +45,10 @@ DataTableCmp LWC - Child of SalesforcePoc component, which is used to display th
 Paginator LWC - Child of SalesforcePoc component, which is used to perform pagination on List of records received.
 
 # Want to deploy this project to your Org?
-Fell free to do so by using the following button.
+Fell free to do so by using this button:
 <a href="https://githubsfdeploy.herokuapp.com?owner=ksamudrala3&repo=SalesforcePOCs&ref=SalesforcePoc">
   <img alt="Deploy to Salesforce"
-       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png" target="_blank">
 </a>
 
 Alternatively you may also use this link to install an unlocked package in your org: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2x000004Nw42AAC
