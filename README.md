@@ -11,6 +11,7 @@ Instructions :
 work. 
 5. We advise you to make assumptions if anything is not clear, however please clearly
 state any assumptions you would have made upfront in the beginning of the interview.
+
 Scenario:
 The customer wants to have the ability to search for opportunities and contacts in a custom
 manner. As part of the search table, the customer expects the below fields:
@@ -23,6 +24,7 @@ manner. As part of the search table, the customer expects the below fields:
 (Text)
 7. Contact Number of most Recent created Contact associated to Opportunity’s Account
 (Phone Number)
+
 The customer is expecting the following functionality:
 > Create a Search box at top of the table to search through the Opportunity Stage,
 Account Name or Contact Name and filter result on basis of input value.
